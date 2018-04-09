@@ -1,0 +1,21 @@
+section {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
+svg {
+    fill: #000000;
+}
+
+.innerCircle {
+    fill: yellow;
+}
+
+.loop1 {
+    stroke: = #000000;
+    stroke-width: = 20px;
+    fill-opacity: 0.1;
+    /*fill: = pink;*/
+}
