@@ -7,17 +7,28 @@
 </head>
 <body>
 <section>
+    <svg class="moonbox" width="1000" height="100">
+        <circle class="moon" cx="0" cy="50" r="20" fill="url(#innerCircle)"/>
+    </svg>
+
     <svg width="1000" height="1000">
-        <circle class="innerCircle" cx="500" cy="500" r="100"/>
-        <circle class="test" cx="500" cy="500" r="400"/>
+
+        <defs>
+        <radialGradient id="innerCircle" x1="0%" y1="0%" x2="100%" y2="0%" r="95%">
+            <stop offset="0%" style="stop-color:white" />
+            <stop offset="100%" style="stop-color:yellow" />
+        </radialGradient>
+        </defs>
+
+        <circle class="innerCircle" cx="500" cy="500" r="100" fill="url(#innerCircle)"/>
+        <circle class="ell0" cx="500" cy="500" r="400"/>
         <ellipse class="ell1" cx="500" cy="500" rx="400" ry="200"/>
         <ellipse class="ell2" cx="500" cy="500" rx="200" ry="400"/>
         <ellipse class="ell3" cx="500" cy="500" rx="200" ry="400"/>
         <ellipse class="ell4" cx="500" cy="500" rx="200" ry="400"/>
-        <circle class="ball1" cx="500" cy="100" r="20"/>
-        <circle class="ball2" cx="225" cy="220" r="20"/>
-        <circle class="ball3" cx="100" cy="500" r="20"/>
-        <circle class="ball4" cx="225" cy="785" r="20"/>
+        <circle class="ball1" cx="500" cy="100" r="20" fill="url(#innerCircle)"/>
+        <circle class="ball3" cx="100" cy="500" r="20" fill="url(#innerCircle)"/>
+        <circle class="ball4" cx="225" cy="785" r="20" fill="url(#innerCircle)"/>
     </svg>
 </section>
 </body>

@@ -1,61 +1,96 @@
 section {
     position: relative;
-    width: 1100px;
+    width: 1000px;
     margin: 0 auto;
-    background-color: lightgrey;
-}
-
-svg {
-    fill: #000000;
-}
-
-.test {
-    stroke: #000000;
-    stroke-width: 2px;
-    fill-opacity: 0;
-}
-
-.innerCircle {
-    fill: #60ff47;
+    background-color: #6f6f6f;
 }
 
 .loop1 {
-    stroke: #000000;
-    stroke-width: 2px;
-    fill-opacity: 0;
-}
-
-.ell1 {
-    stroke: #000000;
-    stroke-width: 2px;
-    fill-opacity: 0;
-}
-
-.ell2 {
-    stroke: #000000;
-    stroke-width: 2px;
+    stroke: #b3ff0f;
+    stroke-width: 1px;
     fill-opacity: 0;
 }
 
 .ell3 {
-    stroke: #000000;
     transform-origin: 50% 50%;
     transform: rotate(45deg);
-    stroke-width: 2px;
-    fill-opacity: 0;
 }
 
 .ell4 {
-    stroke: #000000;
     transform-origin: 50% 50%;
     transform: rotate(-45deg);
-    stroke-width: 2px;
+}
+
+[class^='ell']  {
+    stroke: #5b5b5b;
+    stroke-width: 1px;
     fill-opacity: 0;
 }
 
-
-.ball {
-    stroke: #000000;
-    stroke-width: 2px;
-    fill: #2462ff;
+.ball4 {
+    animation: 3s spi linear infinite;
 }
+
+.ball3 {
+    animation: 2s spi linear infinite;
+    animation-direction: reverse;
+}
+
+.moonbox {
+    fill: #82ffb3;
+    stroke-fill: #6689ff;
+    fill-opacity: 1;
+    z-index: 10;    z-index: 10;
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    /*animation: 2s vert 1s infinite alternate cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
+    animation: 2s vert 1s infinite alternate ease-in-out;
+}
+
+.moon {
+    z-index: 15;
+    fill: #f54aff;
+    /*animation: 2s hor  infinite  alternate cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
+    animation: 2s hor  infinite  alternate ease-in-out;
+}
+
+@keyframes hor {
+    to { transform: translateX(1000px); }
+}
+
+@keyframes vert {
+    to { transform: translateY(300px); }
+}
+
+/*@keyframes spin {*/
+    /*0% {*/
+        /*transform-origin: 500px 50px;*/
+        /*transition-timing-function: linear;*/
+        /*transform: rotate(0deg);*/
+    /*}*/
+    /*100% {*/
+        /*transform-origin: 500px 50px;*/
+        /*transition-timing-function: linear;*/
+        /*transform: rotate(360deg);*/
+    /*}*/
+/*}*/
+
+/*@keyframes slidey {*/
+    /*0% { left: 250px; }*/
+    /*100% { left: 500px; }*/
+/*}*/
+
+
+/*@keyframes slide {*/
+    /*0% {*/
+        /*transform-origin: 250px 500px;*/
+        /*transition-timing-function: linear;*/
+        /*transform: rotate(0deg);*/
+    /*}*/
+    /*100% {*/
+        /*transform-origin: 500px 500px;*/
+        /*transition-timing-function: linear;*/
+        /*transform: rotate(360deg);*/
+    /*}*/
+/*}*/
