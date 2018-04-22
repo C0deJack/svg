@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>svg</title>
+</head>
+<body>
+<section>
+    <div class="spin p1">
+        <svg class="box" width="500" height="200">
+            <circle class="ball" cx="250" cy="100" r="5" fill="url(#iball)"/>
+        </svg>
+    </div>
+    <div class="spin p2">
+        <svg class="box" width="500" height="200">
+            <circle class="ball" cx="250" cy="100" r="5" fill="url(#iball)"/>
+        </svg>
+    </div>
+    <div class="spin p3">
+        <svg class="box" width="500" height="200">
+            <circle class="ball" cx="250" cy="100" r="5" fill="url(#iball)"/>
+        </svg>
+    </div>
+    <div class="spin p4">
+        <svg class="box" width="500" height="200">
+            <circle class="ball" cx="250" cy="100" r="5" fill="url(#iball)"/>
+        </svg>
+    </div>
+    <svg width="500" height="500">
+        <defs>
+        <radialGradient id="iball" x1="0%" y1="0%" x2="100%" y2="0%" r="95%">
+            <stop offset="0%" style="stop-color:#ffffff"/>
+            <stop offset="100%" style="stop-color:#1e67ff"/>
+        </radialGradient>
+        </defs>
+        <circle class="InnerBall" cx="250" cy="250" r="50" fill="url(#iball)"/>
+    </svg>
+</section>
+</body>
+</html>

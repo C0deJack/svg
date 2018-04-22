@@ -1,0 +1,59 @@
+section {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+.box {
+    fill-opacity: 1;
+    z-index: 10;
+    position: relative;
+    left: 0;
+    top: 150px;
+    animation: 1s vertical .5s infinite alternate ease-in-out;
+}
+
+.ball {
+    z-index: 15;
+    animation: 1s horizontal  infinite  alternate ease-in-out;
+}
+
+.spin {
+    height: 500px;
+    position: absolute;
+}
+
+.p1 {
+    animation: 10s spin  infinite linear;
+}
+
+.p2 {
+    transform: rotate(90deg);
+    animation: 10s spin 2.5s infinite linear;
+}
+
+.p3 {
+    transform: rotate(180deg);
+    animation: 10s spin 5s infinite linear;
+}
+
+.p4 {
+    transform: rotate(270deg);
+    animation:10s spin 7.5s infinite linear;
+}
+
+@keyframes horizontal {
+    from { transform: translateX(-200px)}
+    to { transform: translateX(200px) }
+}
+
+@keyframes vertical {
+    from { transform: translateY(-130px); }
+    to { transform: translateY(130px); }
+}
+
+@keyframes spin {
+    from { transform:  rotate( 0deg); }
+    to {transform:  rotate(360deg); }
+}
