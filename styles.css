@@ -1,96 +1,59 @@
 section {
     position: relative;
-    width: 1000px;
+    width: 500px;
     margin: 0 auto;
-    background-color: #6f6f6f;
+    background-color: #000000;
 }
 
-.loop1 {
-    stroke: #b3ff0f;
-    stroke-width: 1px;
-    fill-opacity: 0;
-}
-
-.ell3 {
-    transform-origin: 50% 50%;
-    transform: rotate(45deg);
-}
-
-.ell4 {
-    transform-origin: 50% 50%;
-    transform: rotate(-45deg);
-}
-
-[class^='ell']  {
-    stroke: #5b5b5b;
-    stroke-width: 1px;
-    fill-opacity: 0;
-}
-
-.ball4 {
-    animation: 3s spi linear infinite;
-}
-
-.ball3 {
-    animation: 2s spi linear infinite;
-    animation-direction: reverse;
-}
-
-.moonbox {
-    fill: #82ffb3;
-    stroke-fill: #6689ff;
+.box {
     fill-opacity: 1;
-    z-index: 10;    z-index: 10;
-    position: absolute;
-    left: 0px;
-    top: 300px;
-    /*animation: 2s vert 1s infinite alternate cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
-    animation: 2s vert 1s infinite alternate ease-in-out;
+    z-index: 10;
+    position: relative;
+    left: 0;
+    top: 150px;
+    animation: 1s vertical .5s infinite alternate ease-in-out;
 }
 
-.moon {
+.ball {
     z-index: 15;
-    fill: #f54aff;
-    /*animation: 2s hor  infinite  alternate cubic-bezier(0.445, 0.050, 0.550, 0.950);*/
-    animation: 2s hor  infinite  alternate ease-in-out;
+    animation: 1s horizontal  infinite  alternate ease-in-out;
 }
 
-@keyframes hor {
-    to { transform: translateX(1000px); }
+.spin {
+    height: 500px;
+    position: absolute;
 }
 
-@keyframes vert {
-    to { transform: translateY(300px); }
+.p1 {
+    animation: 10s spin  infinite linear;
 }
 
-/*@keyframes spin {*/
-    /*0% {*/
-        /*transform-origin: 500px 50px;*/
-        /*transition-timing-function: linear;*/
-        /*transform: rotate(0deg);*/
-    /*}*/
-    /*100% {*/
-        /*transform-origin: 500px 50px;*/
-        /*transition-timing-function: linear;*/
-        /*transform: rotate(360deg);*/
-    /*}*/
-/*}*/
+.p2 {
+    transform: rotate(90deg);
+    animation: 10s spin 2.5s infinite linear;
+}
 
-/*@keyframes slidey {*/
-    /*0% { left: 250px; }*/
-    /*100% { left: 500px; }*/
-/*}*/
+.p3 {
+    transform: rotate(180deg);
+    animation: 10s spin 5s infinite linear;
+}
 
+.p4 {
+    transform: rotate(270deg);
+    animation:10s spin 7.5s infinite linear;
+}
 
-/*@keyframes slide {*/
-    /*0% {*/
-        /*transform-origin: 250px 500px;*/
-        /*transition-timing-function: linear;*/
-        /*transform: rotate(0deg);*/
-    /*}*/
-    /*100% {*/
-        /*transform-origin: 500px 500px;*/
-        /*transition-timing-function: linear;*/
-        /*transform: rotate(360deg);*/
-    /*}*/
-/*}*/
+@keyframes horizontal {
+    from { transform: translateX(-200px)}
+    to { transform: translateX(200px) }
+}
+
+@keyframes vertical {
+    from { transform: translateY(-130px); }
+    to { transform: translateY(130px); }
+}
+
+@keyframes spin {
+    from { transform:  rotate( 0deg); }
+    to {transform:  rotate(360deg); }
+}
